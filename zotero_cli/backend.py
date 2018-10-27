@@ -212,7 +212,6 @@ class ZoteroBackend(object):
             yield Item(key=it['data']['key'],
                        creator=it['meta'].get('creatorSummary'),
                        title=it['data'].get('title', "Untitled"),
-                       abstract=it['data'].get('abstractNote'),
                        date=it['data'].get('date'),
                        citekey=citekey)
 
