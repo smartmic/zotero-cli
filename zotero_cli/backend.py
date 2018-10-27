@@ -318,7 +318,8 @@ class ZoteroBackend(object):
         extra_data = DATA_TMPL.format(
             data=encode_blob(note_data).decode('utf8'))
         html = pypandoc.convert(note_data['text'], 'html',
-                                format=note_data['format'])
+                                format=note_data['format'],
+                                extra_args=['--webtex'])
         return html + extra_data
 
     def create_note(self, item_id, note_text):
