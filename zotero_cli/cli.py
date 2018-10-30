@@ -203,7 +203,7 @@ def query(ctx, query, limit):
             out += click.style(item.creator + u': ', fg='cyan')
         out += click.style(item.title, fg='blue')
         if item.date:
-            out += click.style(" ({})".format(item.date), fg='yellow')
+            out += click.style(" ({})".decode('utf-8').format(item.date), fg='yellow')
         click.echo(out)
 
 
